@@ -6,26 +6,29 @@
         <div class=" " style="padding: 16px;">
           <div class=" ">
             <div class="">
-              <img src="~assets/images/Madesoft-logo.png" class="w-[138px]" alt="">
+              <img src="~assets/images/Madesoft-logo.svg" class="w-[138px]" alt="">
             </div>
           </div>
         </div>
 
-        <div class="side-menu top  py-5 mt-5" style="padding: 16px;">
+        <div class="side-menu top  py-5 mt-0" style="padding: 16px;">
           <nav aria-label="Main Nav" class="flex flex-col space-y-4 pt-6">
             <template v-for="(routeItem, index) in routeList" :key="index">
               <router-link
-                  :class="[routeItem.names.includes($route.name) ? 'active px-2' : '']"
+
                   :to="{ path: routeItem.route }"
-                  class="flex items-center gap-2 rounded-lg py-2"
+                  class="flex items-center gap-2 rounded-lg py-2 px-2"
               >
                <div>
                  <img  :src="useAsset(routeItem.icon)" alt="" />
                </div>
 
-               <div>
-                 <div class=" font-light">{{routeItem.title}}</div>
+               <div class="flex">
+                 <div class=" font-light sidebar-text">{{routeItem.title}}</div>
                </div>
+                <div class="flex justify-end ml-auto" >
+                  <span class="text-white" :class="[ routeItem.status ? 'active-four' : '']">{{routeItem.status}}</span>
+                </div>
               </router-link>
             </template>
 
@@ -160,31 +163,36 @@ const routeList = [
   },
 
   {
-    names: ['schools'],
     route: '/My-Program/',
     title: 'My-Program',
     icon: '/my-program.svg',
   },
   {
-    names: ['students'],
     route: '/community/',
     title: 'Community',
     icon: '/community.svg',
+    status: '4'
   },
+
   {
-    names: ['staffs','staffs-new','staffs-id'],
+    route: '/student/',
+    title: 'Students',
+    icon: '/schedule.svg',
+  },
+
+  {
     route: '/Schedule/',
     title: 'Schedule',
     icon: '/schedule.svg',
   },
+
   {
-    names: ['customers','customers-id-top-up','customers-id-edit'],
-    route: '/Help-Center/',
-    title: 'Help Center',
-    icon: '/help-center.svg',
+    route: '/PaymentReport/',
+    title: 'Payment Report',
+    icon: '/schedule.svg',
   },
+
   {
-    names: ['allocation'],
     route: '/settings/',
     title: 'Settings',
     icon: '/settings.svg',
@@ -206,25 +214,29 @@ let toggleSidebar = () => {
 
 <style scoped>
 
-a{
-  color: #C4C4C4!Important;
-  /*font-weight: bold;*/
-  /*opacity: 0.6;*/
+.active-four {
+  border-radius: 5px;
+  background: #FF4155;
+  padding: 3px 10px 3px 9px;
+}
+
+a {
+  color: #584143;
+  opacity: 0.5;
   font-size: 16px!important;
 
 }
 
 
-
 .router-link-active {
   border-radius: 4px;
-  background: #FFF;
-  color: #FF4155!important;
+  background: #130204;
+  color: #fff!important;
   opacity: inherit!important;
 }
 
 .router-link-active span{
-  color: #FF4155!important;
+  color: #fff!important;
   opacity: inherit!important;
 }
 
@@ -241,8 +253,8 @@ a{
     top: 0;
     left: 0;
     border-right: 0.5px solid #D9D9D9;
-    background: #130204;
-    box-shadow: 6px 0px 9px 0px rgba(0, 0, 0, 0.10);
+    background: var(--White, #FFF);
+    //box-shadow: 6px 0px 9px 0px rgba(0, 0, 0, 0.10);
     width: 280px;
     padding: 20px;
     height: 100%;

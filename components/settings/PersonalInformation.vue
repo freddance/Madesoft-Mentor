@@ -105,7 +105,7 @@
               </div>
 
               <div class="mt-4 px-6">
-                <label>Comments</label>
+                <label>About Me</label>
                 <div class="p-4 text-sm mt-2" style="border-radius: 8px;border: 1px solid var(--neutral-100, #E7EAEE); background: #FBFBFB;">
                   School of Engineering Technology focus on real job related hands on technical skill acquisition in Engineering
                   with simultaneous exposure to the practice in the industry through project based training and mentorship by experience industry experts. Graduates are well prepared for the job in the specific field of study at graduation.

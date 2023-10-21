@@ -6,7 +6,6 @@ body {
     width: 100%;
     overflow-x: hidden!important;
     scroll-behavior: smooth;
-    word-spacing: 1px;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -moz-osx-font-smoothing: grayscale;
@@ -118,6 +117,12 @@ label {
     width: 1rem;
 }
 
+.table-head {
+    background:  #F2F4F7!important;
+    color:  #475467!important;
+    font-size: 13px!important;
+}
+
 
 .p-progressbar {
     border: 0 none;
@@ -155,3 +160,16 @@ label {
     height: 300px!important;
 }
 
+.p-dropdown {
+    background: #ffffff;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    border-radius: 6px;
+    border: 1px solid #EBEBEB!important;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05)!important;
+}
+
+@media screen and (max-width: 800px) {
+    .space {
+        white-space: nowrap;
+    }
+}

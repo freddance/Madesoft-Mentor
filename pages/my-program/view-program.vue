@@ -1,7 +1,7 @@
 <template>
     <div>
   
-      <div class="bg-white px-10 py-6">
+      <div class="bg-white px-12 py-6">
         <h1 class="font-bold head-text">My Program</h1>
 
         <div class=" mt-8">
@@ -10,14 +10,13 @@
             <div>
                 <div style="background: #FBFCFF; padding: 6px 12px;" class="flex gap-x-6 mx-4 mt-2">
               <div class="cursor-pointer px-2" @click="toggleType(OPTION_1)" :class="[type === OPTION_1 ? 'active' : '']">Modules</div>
-              <div class="cursor-pointer px-2" @click="toggleType(OPTION_2)" :class="[type === OPTION_2 ? 'active' : '']">Assignments</div>
-              <div class="cursor-pointer px-2" @click="toggleType(OPTION_3)" :class="[type === OPTION_3 ? 'active' : '']">Projects</div>
-              <div class="cursor-pointer px-2" @click="toggleType(OPTION_4)" :class="[type === OPTION_4 ? 'active' : '']">Grade book</div>
-              <div class="cursor-pointer px-2" @click="toggleType(OPTION_5)" :class="[type === OPTION_5 ? 'active' : '']">Syllables</div>
+              <div class="cursor-pointer px-2" @click="toggleType(OPTION_2)" :class="[type === OPTION_2 ? 'active' : '']">Syllables</div>
+              <div class="cursor-pointer px-2" @click="toggleType(OPTION_3)" :class="[type === OPTION_3 ? 'active' : '']">Assignment</div>
+              <div class="cursor-pointer px-2" @click="toggleType(OPTION_4)" :class="[type === OPTION_4 ? 'active' : '']">Quizzes</div>
             </div>
             </div>
 
-            <div>
+            <div class="px-6">
                 <div class="relative">
             <div class="absolute inset-y-0 left-0 flex items-center pl-3 bottom-5 md:bottom-0 pointer-events-none">
               <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor"
@@ -49,16 +48,16 @@
         <MyProgramModules />
       </div>
 
-        <div class="mt-8 px-10" v-if="type === OPTION_2">
+        <div class="mt-8 " v-if="type === OPTION_2">
+          <Syllables />
+        </div>
+
+        <div v-if="type === OPTION_3" class="lg:px-12 px-4">
           <Assignment />
         </div>
 
-        <div v-if="type === OPTION_4">
-          <GradeBook />
-        </div>
-
-        <div v-if="type === OPTION_5">
-          <Syllables />
+        <div v-if="type === OPTION_4" >
+          <Quizzes />
         </div>
       </div>
   
@@ -71,13 +70,13 @@
   import Assignment from "~/components/MyProgram/Assignment.vue";
   import GradeBook from "~/components/MyProgram/GradeBook.vue";
   import Syllables from "~/components/MyProgram/Syllables.vue";
+  import Quizzes from "~/components/MyProgram/Quizzes.vue";
   
   let tabs = [
     'Modules',
-    'Assignments',
-    'Projects',
-    'Grade book',
     'Syllables',
+    'Assignments',
+    'Quizzes',
   ]
   
   const type = useQueryParamsTabSwitch(tabs);

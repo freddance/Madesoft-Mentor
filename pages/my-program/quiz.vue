@@ -1,6 +1,10 @@
 <template>
   <div>
 
+    <div class="bg-white px-10 py-6 flex">
+      <h1 class="font-bold head-text">Quiz Status</h1> <h1 class="head-text ml-2">for (Jonah Austin)</h1>
+    </div>
+
     <div class="px-10 mt-8">
       <div class="flex">
         <div class="flex px-2">
@@ -27,13 +31,17 @@
           </div>
 
           <div class=" ">
-            <div class="border-b py-8 ">
-              <h2 class="mx-12 flex gap-2"> <div class="font-bold">Question 1:</div> What is Industrial Automation</h2>
+            <div class="border-b py-8 flex justify-between">
+              <h2 class="mx-8 flex gap-2"> <div class="font-bold">Question 1:</div> What is Industrial Automation</h2>
+
+              <div class="text-4xl px-8">
+                Score: <span class="font-medium">95%</span>
+              </div>
             </div>
 
             <div class=" pt-8 pb-10">
               <div class="flex mt-6 px-12 border-b pb-10">
-                <Checkbox v-model="checked" :binary="true" class="mt-2" />
+                <input type="checkbox" class="mt-2">
                 <div class="px-4">
                   This is a high-level pictorial view of a PLC dishing 1's and 0's to an industrial plant
                   conveyor with a counter counting the packets as they pass through a sensor.
@@ -41,7 +49,7 @@
               </div>
 
               <div class="flex mt-12 px-12 border-b pb-10">
-                <Checkbox v-model="checked" :binary="true" class="mt-2" />
+                <input type="checkbox" class="mt-2">
                 <div class="px-4">
                   This is a high-level pictorial view of a PLC dishing 1's and 0's to an industrial plant
                   conveyor with a counter counting the packets as they pass through a sensor.
@@ -49,7 +57,7 @@
               </div>
 
               <div class="flex mt-12 px-12 border-b pb-10">
-                <Checkbox v-model="checked" :binary="true" class="mt-2" />
+                <input type="checkbox" class="mt-2">
                 <div class="px-4">
                   This is a high-level pictorial view of a PLC dishing 1's and 0's to an industrial plant
                   conveyor with a counter counting the packets as they pass through a sensor.
@@ -57,7 +65,7 @@
               </div>
 
               <div class="flex mt-12 px-12 border-b pb-10">
-                <Checkbox v-model="checked" :binary="true" class="mt-2" />
+                <input type="checkbox" class="mt-2">
                 <div class="px-4">
                   This is a high-level pictorial view of a PLC dishing 1's and 0's to an industrial plant
                   conveyor with a counter counting the packets as they pass through a sensor.
@@ -67,14 +75,14 @@
           </div>
         </div>
 
-        <div class="flex justify-between mt-8">
-          <div>
-            <button class="nobg-btn w-[170px]">Previous</button>
-          </div>
-          <div>
-            <MadesoftButton title="Next" is-loading="" class="w-[170px]"></MadesoftButton>
-          </div>
-        </div>
+<!--        <div class="flex justify-between mt-8">-->
+<!--          <div>-->
+<!--            <button class="nobg-btn w-[170px]">Previous</button>-->
+<!--          </div>-->
+<!--          <div>-->
+<!--            <MadesoftButton title="Next" is-loading="" class="w-[170px]"></MadesoftButton>-->
+<!--          </div>-->
+<!--        </div>-->
       </div>
 
 
