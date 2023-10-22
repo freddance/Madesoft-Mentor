@@ -17,7 +17,7 @@
               </div>
   
               <div class="flex justify-end ml-auto pt-4"  >
-                <img src="~assets/images/total-student.svg" alt="" srcset="">
+<!--                <img src="~assets/images/total-student.svg" alt="" srcset="">-->
               </div>
             </div>
           </div>
