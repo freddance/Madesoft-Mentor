@@ -140,7 +140,7 @@
 
 <script setup>
 import {useQueryParamsTabSwitch} from "~/composables/useSwitchQueryParams";
-import OverViewCard from "../../components/student/OverViewCard.vue";
+import OverViewCard from "~/components/Student/OverViewCard.vue";
 import {Menu, MenuButton, MenuItem, MenuItems} from "@headlessui/vue";
 
 let tabs = [
