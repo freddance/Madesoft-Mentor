@@ -128,9 +128,9 @@
           </div>
         </div>
 
-        <div class="mt-4">
+        <nuxt-link to="/my-program/" class="mt-4">
           <img src="~assets/images/back-to-programs.svg" alt="">
-        </div>
+        </nuxt-link>
       </div>
 
 
