@@ -75,6 +75,12 @@
           </div>
         </div>
 
+        <div class="schedules p-3">
+          <div class="flex justify-between">
+              <div class="text-lg">Schedules</div>
+              <div class="text-sm pt-1" style="color: #FF4155;">See all</div>
+          </div>
+        </div>
 
       </div>
 
@@ -172,5 +178,12 @@ span{
   box-shadow: 0px 2px 9px 4px rgba(0, 0, 0, 0.04);
   color: #FF4155;
   padding: 23px 474px 23px 402px;
+}
+
+
+.schedules {
+  border-radius: 8px;
+  background: var(--White, #FFF);
+  box-shadow: 0px 0.4px 2px 0px rgba(16, 24, 40, 0.06), 0px 0.5px 3px 0px rgba(16, 24, 40, 0.10);
 }
 </style>
