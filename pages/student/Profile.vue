@@ -25,7 +25,7 @@
 
 <script setup>
 import {useQueryParamsTabSwitch} from "~/composables/useSwitchQueryParams";
-import OverViewCard from "../../components/student/OverViewCard.vue";
+
 
 let tabs = [
   'Overview',
